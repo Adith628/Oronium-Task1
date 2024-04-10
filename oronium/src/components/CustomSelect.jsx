@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Image from "next/image";
 
 const CustomSelect = ({ options }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,9 @@ const CustomSelect = ({ options }) => {
   return (
     <div className="flex flex-col  hover:border-red-200 gap-2 items-center border w-fit px-2 py-2.5 rounded-lg">
       <div className="flex" onClick={() => setIsOpen(!isOpen)}>
-        <img
+        <Image
+          width={24}
+          height={24}
           className="mx-2 w-6 h-6"
           src={selectedOption ? selectedOption.icon : "/icons/facebook.png"}
           alt=""
@@ -38,7 +41,9 @@ const CustomSelect = ({ options }) => {
         <div className="options  w-full  flex flex-col gap-2 items-start">
           {options.map((option) => (
             <div className="w-full px-2 py-1 rounded-lg hover:bg-red-100">
-              <img
+              <Image
+                width={24}
+                height={24}
                 key={option.value}
                 className="w-6 h-6 "
                 src={option.icon}

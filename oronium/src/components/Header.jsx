@@ -1,8 +1,15 @@
+import Image from "next/image";
 export const Header = () => {
   return (
     <header className="sticky top-0 w-full bg-white flex justify-between md:py-4 md:px-8 px-3 py-3 border-0 border-b-2">
       <div className="flex justify-center items-center">
-        <img src="/images/oronium.png" className="w-14" alt="" />
+        <Image
+          height={56}
+          width={56}
+          src="/images/oronium.png"
+          className="w-14"
+          alt=""
+        />
         <h3 className="text-lg font-semibold leading-6 mr-1">Oronium</h3>
         <h3 className="hidden md:block text-lg font-semibold leading-6">
           E-Commerce Store
@@ -10,7 +17,9 @@ export const Header = () => {
       </div>
       <div className="flex  flex-1 justify-end items-center gap-4">
         <button className="flex justify-center gap-1.5 px-3 items-center  bg-[#C63E4A] p-2 h-12 rounded-lg text-xs text-white">
-          <img
+          <Image
+            height={14}
+            width={14}
             src="/images/play.png"
             className="h-3.5  object-contain"
             alt=""
@@ -41,7 +50,13 @@ export const Header = () => {
             </g>
           </svg>
         </button>
-        <img src="/images/Avatar.png" className="w-12 h-12" alt="" />
+        <Image
+          height={48}
+          width={48}
+          src="/images/Avatar.png"
+          className="w-12 h-12"
+          alt=""
+        />
       </div>
     </header>
   );

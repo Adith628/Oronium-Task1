@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import CustomSelect from "./CustomSelect";
 const Hero = () => {
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -54,7 +55,9 @@ const Hero = () => {
             >
               {previewUrl ? (
                 <>
-                  <img
+                  <Image
+                    height={144}
+                    width={144}
                     src={previewUrl}
                     alt="Preview"
                     className="object-contain mt-4 flex justify-center items-center overflow-hidden w-full h-full rounded-lg"
@@ -83,7 +86,13 @@ const Hero = () => {
               )}
               {!previewUrl && (
                 <div className=" w-full  group-hover:-translate-x-5 flex justify-center items-center gap-1 transition-all duration-700">
-                  <img src="/icons/upload.png" className="w-5 h-5" alt="" />
+                  <Image
+                    height={24}
+                    width={24}
+                    src="/icons/upload.png"
+                    className="w-5 h-5"
+                    alt=""
+                  />
                   <p className="text-base font-semibold  text-gray-500 opacity-0 group-hover:opacity-100  transition-all duration-300">
                     Upload
                   </p>

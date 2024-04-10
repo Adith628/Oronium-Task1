@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 export const OptionItem = ({
   text,
   icon,
@@ -15,7 +16,13 @@ export const OptionItem = ({
       }`}
       onClick={() => onItemClick(text)}
     >
-      <img src={isSelected ? iconsel : icon} className="w-5 " alt="" />
+      <Image
+        height={24}
+        width={24}
+        src={isSelected ? iconsel : icon}
+        className="w-5 "
+        alt=""
+      />
       <span>{text}</span>
     </li>
   );
