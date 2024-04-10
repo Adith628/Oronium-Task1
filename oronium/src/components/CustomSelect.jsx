@@ -40,7 +40,10 @@ const CustomSelect = ({ options }) => {
       {isOpen && (
         <div className="options  w-full  flex flex-col gap-2 items-start">
           {options.map((option) => (
-            <div className="w-full px-2 py-1 rounded-lg hover:bg-red-100">
+            <div
+              key={option.value}
+              className="w-full px-2 py-1 rounded-lg hover:bg-red-100"
+            >
               <Image
                 width={24}
                 height={24}
